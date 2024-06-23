@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sequence and Series Solver</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Sequence and Series Solver</h1>
+        </div>
+    </header>
+
+    <section id="theory">
+        <div class="container">
+            <h2>Theory</h2>
+            <div class="theory-section">
+                <h3>Arithmetic Series</h3>
+                <p>An arithmetic series is the sum of the terms of an arithmetic sequence.</p>
+                <p>The nth term of an arithmetic series:</p>
+                <p><span class="math">a_n = a + (n - 1)d</span></p>
+                <p>The sum of an arithmetic series with <span class="math">n</span> terms:</p>
+                <p><span class="math">S_n = n/2( 2a + (n-1)d)</span></p>
+
+                <h3>Geometric Progression</h3>
+                <p>A geometric progression is a sequence of numbers where each term after the first is found by
+                    multiplying the previous one by a fixed, non-zero number called the common ratio.</p>
+                <p>The nth term of a geometric series:</p>
+                <p><span class="math">a_n = ar<sup>(n-1)</sup></span></p>
+                <p>The sum of a geometric series with <span class="math">n</span> terms:</p>
+                <p><span class="math">S_n = (ar<sup>n</sup>)/(n-1) for <span class="math"></span></span></p>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <section id="solver">
+        <div class="container">
+            <h2>Series Solver</h2>
+            <form id="seriesForm">
+                <label for="seriesType">Select Series Type:</label>
+                <select id="seriesType" name="seriesType">
+                    <option value="arithmetic">Arithmetic Series</option>
+                    <option value="geometric">Geometric Progression</option>
+
+                </select>
+
+                <label for="firstTerm">First Term <span class="math">(a):</span></label>
+                <input type="number" id="firstTerm" name="firstTerm" required>
+
+                <label for="commonDifferenceRatio">Common Difference/Ratio <span class="math">(d/r):</span></label>
+                <input type="number" id="commonDifferenceRatio" name="commonDifferenceRatio" required>
+
+                <label for="numberOfTerms">Number of Terms <span class="math">(n):</span></label>
+                <input type="number" id="numberOfTerms" name="numberOfTerms" required>
+
+                <button type="submit">Calculate</button>
+            </form>
+
+            <div id="result" class="result-section">
+                <h3>Result</h3>
+                <p id="resultMessage">Enter values and click 'Calculate' to see the result.</p>
+                <p id="seriesResult"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sequence and Series Solver</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
